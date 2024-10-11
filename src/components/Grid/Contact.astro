@@ -1,0 +1,32 @@
+---
+import CVBackground from "../CVBackground.astro";
+import Download from "../svg/Download.astro";
+---
+
+<article
+  class="col-span-12 md:col-span-3 p-14 relative flex flex-col gap-12 rounded-3xl overflow-hidden"
+>
+  <div class="z-10">
+    <p class="text-white text-2xl mb-4">Descarga mi CV</p>
+    <div
+      class="p-4 rounded-md max-w-fit cursor-pointer border-[1px] border-white/30 bg-white/10 hover:bg-white/30"
+    >
+      <a
+        href="/public/cv/GonzaloEspindolaCV.pdf"
+        download="GonzaloEspindolaCV.pdf"
+        type="button"
+      >
+        <Download />
+      </a>
+    </div>
+  </div>
+
+  <img
+    class="absolute z-0 h-full w-full object-cover"
+    src="/public/assets/contact.png"
+    alt="Imagen de la sección de contacto"
+    title="Imagen de la sección de contacto"
+  />
+
+  <CVBackground />
+</article>

@@ -1,0 +1,14 @@
+---
+interface Props {
+  title: string;
+  theme?: "light" | "dark";
+}
+
+const { title, theme } = Astro.props;
+---
+
+<article
+  class={`absolute px-3 py-1 font-semibold rounded-lg border-[1px] pointer-events-none text-xs top-4 ml-14 z-50 ${theme === "dark" ? "text-dark bg-black/10 border-black/30" : "text-white bg-white/10 border-white/30"}`}
+>
+  <span>{title}</span>
+</article>

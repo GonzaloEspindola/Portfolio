@@ -1,11 +1,64 @@
 ---
-import Image from "./Image.astro";
+import Web from "../svg/Web.astro";
+import Experience from "./Experience.astro";
 import NavBar from "./NavBar.astro";
 import Resume from "./Resume.astro";
+import WorkContainer from "./WorkContainer.astro";
+import Skills from "./Skills.astro";
+import Contact from "./Contact.astro";
+import Tag from "../Tag.astro";
 ---
 
 <section class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-12">
   <NavBar />
   <Resume />
-  <Image />
+  <Experience />
+  <WorkContainer>
+    <slot name="tag">
+      <Tag title="Proyecto" theme="dark" />
+    </slot>
+
+    <img
+      src="/public/assets/aniBackground.png"
+      alt="Imagen del proyecto aniBackground"
+      class="w-full h-full object-cover mask"
+      title="Imagen del proyecto aniBackground"
+    />
+
+    <section class="flex flex-col gap-2 absolute bottom-0 p-14">
+      <div class="flex items-center gap-4">
+        <h4 class="text-4xl text-white">AniBackground</h4>
+        <Web />
+      </div>
+      <p class="text-sm text-white opacity-55">
+        Personaliza tus backgrounds animados y exportalos en código para tu web.
+      </p>
+    </section>
+  </WorkContainer>
+
+  <WorkContainer>
+    <slot name="tag">
+      <Tag title="Proyecto" theme="light" />
+    </slot>
+
+    <img
+      src="/public/assets/friendPet.png"
+      alt="Imagen del proyecto Friend Pet"
+      title="Imagen del proyecto Friend Pet"
+      class="w-full h-full object-cover mask"
+    />
+
+    <section class="flex flex-col gap-2 absolute bottom-0 p-14">
+      <div class="flex items-center gap-4">
+        <h4 class="text-3xl text-white">FriendPet</h4>
+        <Web />
+      </div>
+      <p class="text-sm text-white opacity-55">
+        Crea perfiles para tus mascotas y accede a través de un código QR.
+      </p>
+    </section>
+  </WorkContainer>
+
+  <Skills />
+  <Contact />
 </section>

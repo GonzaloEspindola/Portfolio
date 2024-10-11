@@ -6,17 +6,18 @@ import Mail from "../svg/Mail.astro";
 ---
 
 <article
-  class="col-span-8 p-14 relative flex flex-col gap-12 rounded-3xl overflow-hidden"
+  class="col-span-12 lg:col-span-8 p-14 relative flex flex-col gap-12 rounded-3xl overflow-hidden card"
 >
   <div class="flex justify-between items-center z-10">
-    <section class="flex items-center gap-4">
+    <section class="flex items-center gap-4 z-50">
       <img
-        class="w-12 h-12"
-        src="/public/assets/icon.png"
+        class="w-12 h-12 rounded-full object-cover"
+        src="/public/assets/icon.jpeg"
         alt="Foto animada de Gonzalo Espindola"
+        title="Foto animada de Gonzalo Espindola"
       />
       <div>
-        <h1 class="text-md text-white">Gonzalo Espindola</h1>
+        <h2 class="text-md text-white">Gonzalo Espindola</h2>
         <p class="text-sm text-white opacity-55">Desarrollador Web</p>
       </div>
     </section>
@@ -29,14 +30,15 @@ import Mail from "../svg/Mail.astro";
   </div>
 
   <div class="z-10">
-    <h2 class="text-5xl text-white">Passionate to pursue the technology.</h2>
+    <h3 class="text-5xl text-white">+1 año de experiencia profesional</h3>
   </div>
 
   <div class="z-10">
-    <h4 class="text-xl text-white opacity-55">
-      I enjoy learning new things and try to overcome new challenges while
-      analyzing how I improved through them.
-    </h4>
+    <p class="text-xl text-white opacity-55">
+      Apasionado por el uso de tecnologías modernas para mejorar la eficiencia
+      en la gestión de proyectos
+    </p>
   </div>
+
   <HelloBackground />
 </article>

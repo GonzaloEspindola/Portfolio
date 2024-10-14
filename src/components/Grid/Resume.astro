@@ -8,7 +8,9 @@ import Mail from "../svg/Mail.astro";
 <article
   class="col-span-12 lg:col-span-8 p-14 relative flex flex-col gap-12 rounded-3xl overflow-hidden card"
 >
-  <div class="flex justify-between items-center z-10">
+  <div
+    class="flex flex-col justify-between items-center z-10 gap-4 md:flex-row"
+  >
     <section class="flex items-center gap-4 z-50">
       <img
         class="w-12 h-12 rounded-full object-cover"
@@ -22,7 +24,7 @@ import Mail from "../svg/Mail.astro";
       </div>
     </section>
 
-    <section class="flex items-center justify-center gap-2">
+    <section class="flex items-center justify-center gap-4">
       <GitHub />
       <LinkedIn />
       <Mail />
@@ -30,11 +32,15 @@ import Mail from "../svg/Mail.astro";
   </div>
 
   <div class="z-10">
-    <h3 class="text-5xl text-white">+1 año de experiencia profesional</h3>
+    <h3 class="text-3xl text-white text-center md:text-5xl md:text-start">
+      +1 año de experiencia profesional
+    </h3>
   </div>
 
   <div class="z-10">
-    <p class="text-xl text-white opacity-55">
+    <p
+      class="text-md text-center text-white opacity-55 md:text-xl md:text-start"
+    >
       Apasionado por el uso de tecnologías modernas para mejorar la eficiencia
       en la gestión de proyectos
     </p>

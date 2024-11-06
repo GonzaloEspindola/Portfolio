@@ -1,9 +1,10 @@
 ---
 interface Props {
   link: string;
+  text: string;
 }
 
-const { link } = Astro.props as Props;
+const { link, text } = Astro.props as Props;
 ---
 
 <div class="relative group">
@@ -28,8 +29,9 @@ const { link } = Astro.props as Props;
     class="transition-all blur-0 grayscale-0 group-hover:opacity-20 group-hover:blur-sm sm:h-7"
     rel="noopener noreferrer"
     target="_blank"
-    aria-label="Seguir en GitHub"
-    :href={link}
+    aria-label={text}
+    href={link}
+    title={text}
     ><svg
       fill="none"
       viewBox="0 0 24 24"
